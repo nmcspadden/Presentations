@@ -1,0 +1,1447 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAYcAA0AAAAACjQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABwAAAAca8vGTk9TLzIAAAFMAAAARAAAAFZG1VHVY21hcAAAAZAAAAA+AAABQgAP9AdjdnQgAAAB0AAAAAQAAAAEACICiGdhc3AAAAHUAAAACAAAAAj//wADZ2x5ZgAAAdwAAADRAAABEKyikaNoZWFkAAACsAAAAC0AAAA2AtXoA2hoZWEAAALgAAAAHAAAACQHngNFaG10eAAAAvwAAAAQAAAAEAwAACJsb2NhAAADDAAAAAoAAAAKALIAVG1heHAAAAMYAAAAHwAAACABEAB2bmFtZQAAAzgAAALBAAAFu3I9x/Nwb3N0AAAF/AAAAB0AAAAvaoFvbwAAAAEAAAAAzBdyYwAAAADP2IQvAAAAAM/bz7t4nGNgZGFgnMDAysDB1Ml0hoGBoR9CM75mMGLkYGBgYmBlZsAKAtJcUxgcPsR8iGF2+O/AEMPsznAYKMwIkgMA5REMOXicY2BgYGaAYBkGRgYQsAHyGMF8FgYFIM0ChED+h5j//yEk/3KoSgZGNgYYk4GRCUgwMaACRoZhDwCs7QgGAAAAIgKIAAAAAf//AAJ4nHWMMQrCQBBF/0zWrCCIKUQsTDCL2EXMohYGSSmorScInsRGL2DOYJe0Ntp7BK+gJ1BxF1stZvjz/v8DRghQzEc4kIgKwiAppcA9LtzKLSkdNhKFY3HF4lK69ExKslx7Xa+vPRVS43G98vG1DnkDMIBUgFN0MDXflU8tbaZOUkXUH0+U27RoRpOIyCKjbMCVejwypzJJG4jIwb43rfl6wbwanocrJm9XFYfskuVC5K/TPyczNU7b84CXcbxks1Un6H6tLH9vf2LRnn8Ax7A5WQAAAHicY2BkYGAA4teL1+yI57f5ysDNwgAC529f0kOmWRiYVgEpDgYmEA8AUzEKsQAAAHicY2BkYGB2+O/AEMPCAAJAkpEBFbAAADgKAe0EAAAiAAAAAAQAAAAEAAAAAAAAKgAqACoAiAAAeJxjYGRgYGBhsGFgYgABEMkFhAwM/xn0QAIAD6YBhwB4nI1Ty07cMBS9QwKlQapQW3VXySvEqDCZGbGaHULiIQ1FKgjWMxknMfLEke2A+IJu+wntrt/QbVf9gG75jK577Lg8K1qQPCfnnnt8fX1NRC/pmjrk/zprC+8D7tBy9DHgBXoWfQ44Av8t4Bj4Z8CLtBL9CniJluPXASf0Lm4CXqFX8Q84dOLnMB17N4c7tBo1AS/Qi+hTwBH4rwHHwN8DXqQ30XXAS7QaLwSc0Gn8NuAVWou/gFmnjLrEaEh9GmDdDGgL3B4JsrRPDU2hTOiMSuJUIdKQQayiAth69r6akSSFqIJuA19TrzCIaY8sIoxyrNIrL//pw7A2iMygkX5vDj+G+kuoLdX4GlGK/8Lnlz6/h9MpmoO9rafrz7ILXEHHaAx95s9lsI7AHNMBWEZHULnfAXwG9/ZqdzLI08iuwRloXE8kfhXYAvE23+23DU3t626rbs8/8adv+9DWknsHp3E17oCf+Z48rvEQNZ78paYM38qfk3v/u3l3u3GXN2Dmvmvpf1Srwk3pB/VSsp512bA/GG5i2WJ7wu430yQ5K3nFGiOqgtmSB5pJVSizwaacmUZzZhXLlZTq8qGGFY2YcSkqbth6aW1tRmlaCFs2016m5qn36SbJrqosG4uMV4aP2PHBmB3tjtmgN2izkGQyLWprekbIntJFing32a5rKWCN/SdSoga45EJykyQ7asZvHQ8PTm6cslIpwyeyjbVltNikc2HTR7YKh9LBl9DADC0U/jLcBZDKrMhUBfQBvXRzLtFtjU9eNHKin0x5InTqb8lNpfKv1s1xHzTXRqgKzek/mb7nB8RZTCDhGEX3kK/8Q75AmUM/eLkfA+0Hi908Kx4eNsMgudg5GLdRD7a84npi+YxNr5i5KIbW5izXas7cHXIMAau1OueZhfj+cOcP3P8MNIWLyYOBuxL6DRylJ4cAAAB4nGNgYoAALjDJyIAOWMCiTIxMLDmZedkABtIBygAAAA==) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>HowAutoDMGCBWorks</title></head><body><article class="markdown-body"><p>build-lists: true
+footer: MacBrained, May 2016 
+slidenumbers: false</p>
+
+<h1>
+<a id="user-content-automating-imaging-creation-at-facebook" class="anchor" href="#automating-imaging-creation-at-facebook" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Automating Imaging Creation at Facebook</h1>
+
+<h3>
+<a id="user-content-wizardry-edition" class="anchor" href="#wizardry-edition" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizardry Edition</h3>
+
+<h4>
+<a id="user-content-nick-mcspadden" class="anchor" href="#nick-mcspadden" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nick McSpadden</h4>
+
+<hr>
+
+<h1>
+<a id="user-content-imaging-is-dead" class="anchor" href="#imaging-is-dead" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imaging is dead.</h1>
+
+<p>^ "Thin" deployments are the new hotness</p>
+
+<hr>
+
+<h1>
+<a id="user-content-dep--mdm--thin-provisioning-is-the-new-hotness" class="anchor" href="#dep--mdm--thin-provisioning-is-the-new-hotness" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DEP + MDM + thin provisioning is the new hotness.</h1>
+
+<p>^ DEP / VPP / MDM are the "Apple" way of managing and deploying Macs.</p>
+
+<hr>
+
+<h1>
+<a id="user-content-a-machine-bought-from-apple-turned-on-for-the-first-time-proceeds-to-set-itself-up--handy" class="anchor" href="#a-machine-bought-from-apple-turned-on-for-the-first-time-proceeds-to-set-itself-up--handy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A machine bought from Apple turned on for the first time proceeds to set itself up.  Handy!</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot" class="anchor" href="#on-first-boot" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office...</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-1" class="anchor" href="#on-first-boot-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office...</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-2" class="anchor" href="#on-first-boot-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office...</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-3" class="anchor" href="#on-first-boot-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office...</li>
+</ul>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/turtle_why.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/turtle_why.png" alt="inline" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-4" class="anchor" href="#on-first-boot-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-5" class="anchor" href="#on-first-boot-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome </li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-6" class="anchor" href="#on-first-boot-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-7" class="anchor" href="#on-first-boot-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-8" class="anchor" href="#on-first-boot-8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-9" class="anchor" href="#on-first-boot-9" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-10" class="anchor" href="#on-first-boot-10" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji><g-emoji alias="clock11" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55a.png">🕚</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Apply configurations</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-11" class="anchor" href="#on-first-boot-11" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji><g-emoji alias="clock11" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55a.png">🕚</g-emoji><g-emoji alias="clock12" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55b.png">🕛</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Apply configurations <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Run Apple updates</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-12" class="anchor" href="#on-first-boot-12" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji><g-emoji alias="clock11" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55a.png">🕚</g-emoji><g-emoji alias="clock12" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55b.png">🕛</g-emoji><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Apply configurations <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Run Apple updates</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-13" class="anchor" href="#on-first-boot-13" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji><g-emoji alias="clock11" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55a.png">🕚</g-emoji><g-emoji alias="clock12" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55b.png">🕛</g-emoji><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Apply configurations <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Run Apple updates</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-14" class="anchor" href="#on-first-boot-14" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji><g-emoji alias="clock11" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55a.png">🕚</g-emoji><g-emoji alias="clock12" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55b.png">🕛</g-emoji><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Apply configurations <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Run Apple updates</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-on-first-boot-15" class="anchor" href="#on-first-boot-15" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>On first boot:</h1>
+
+<p><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock5" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f554.png">🕔</g-emoji><g-emoji alias="clock6" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f555.png">🕕</g-emoji><g-emoji alias="clock7" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f556.png">🕖</g-emoji><g-emoji alias="clock8" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f557.png">🕗</g-emoji><g-emoji alias="clock9" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f558.png">🕘</g-emoji><g-emoji alias="clock10" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f559.png">🕙</g-emoji><g-emoji alias="clock11" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55a.png">🕚</g-emoji><g-emoji alias="clock12" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f55b.png">🕛</g-emoji><g-emoji alias="clock1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f550.png">🕐</g-emoji><g-emoji alias="clock2" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f551.png">🕑</g-emoji><g-emoji alias="clock3" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f552.png">🕒</g-emoji><g-emoji alias="clock4" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f553.png">🕓</g-emoji></p>
+
+<ul>
+<li>Let's go ahead and install MS Office... <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Firefox <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Chrome <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Let's install Photoshop <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Apply configurations <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+</li>
+<li>Run Apple updates <g-emoji alias="white_check_mark" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png">✅</g-emoji>
+
+<ul>
+<li>Now <em>reboot</em>!</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-modular-deployment-is-great-and-flexible" class="anchor" href="#modular-deployment-is-great-and-flexible" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modular deployment is great and flexible.</h1>
+
+<h2>
+<a id="user-content-its-the-best-option-for-many-if-not-most" class="anchor" href="#its-the-best-option-for-many-if-not-most" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>It's the best option for many, if not most.</h2>
+
+<hr>
+
+<h1>
+<a id="user-content-but-its-not-very-fast" class="anchor" href="#but-its-not-very-fast" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>But it's not very <em>fast</em>.</h1>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/turtle.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/turtle.png" alt="inline" style="max-width:100%;"></a></p>
+
+<p>^ At Facebook, <em>speed</em> is of the essence, due to sheer volume of numbers. During intern season, we need to go through hundreds of machines in a manner of weeks. Thin deployments just aren't fast enough.</p>
+
+<hr>
+
+<h1>
+<a id="user-content-the-context-to-this-solution-is" class="anchor" href="#the-context-to-this-solution-is" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The context to this solution is:</h1>
+
+<h1>
+<a id="user-content-speed-above-all-else" class="anchor" href="#speed-above-all-else" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>speed above all else</em>
+</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-imaging-is-fast" class="anchor" href="#imaging-is-fast" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imaging is fast!</h1>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/cheetah.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/cheetah.png" alt="inline" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-imaging-is-fast-pros" class="anchor" href="#imaging-is-fast-pros" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imaging is fast: Pros</h1>
+
+<p>AutoDMG + Apple updates gives us a fast deploy of a fresh system.</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg1.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg1.png" alt="inline 54%" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-imaging-is-fast-pros-1" class="anchor" href="#imaging-is-fast-pros-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imaging is fast: Pros</h1>
+
+<p>AutoDMG + first-boot config + first-boot software installation (i.e. AutoDMG + Munki) is a popular choice.</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/munkibootstrap1.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/munkibootstrap1.png" alt="inline" style="max-width:100%;"></a></p>
+
+<hr>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/mad1.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/mad1.png" alt="left fit" style="max-width:100%;"></a></p>
+
+<p><br>
+<br>
+"Going MAD" - Steve Yuroff,
+PSU Mac 2014
+<a href="">https://youtu.be/UG84nedo4ag</a>
+<br>
+AutoDMG -&gt; 
+Munki, AutoPkg, DeployStudio </p>
+
+<p>is the staple of efficient thin-imaging.</p>
+
+<hr>
+
+<h1>
+<a id="user-content-imaging-is-fast-pros-2" class="anchor" href="#imaging-is-fast-pros-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imaging is fast: Pros</h1>
+
+<p>In such a scenario, the image rarely needs rebuilding or change.</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg1.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg1.png" alt="inline 54%" style="max-width:100%;"></a><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg2.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg2.png" alt="inline 54%" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-imaging-is-fast-cons" class="anchor" href="#imaging-is-fast-cons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Imaging is fast: Cons</h1>
+
+<ul>
+<li>We're only saving a little bit of time by deploying <em>just</em> the image via block-restore.</li>
+<li>Munki still has to download and install all the software on first boot (non-interactively, at least).</li>
+<li>We've shifted the problem only a little bit and haven't really saved much time.</li>
+<li>Transferring big images across the world is expensive.</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-we-want-speed-and-flexibility" class="anchor" href="#we-want-speed-and-flexibility" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>We want speed <em>and</em> flexibility.</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-ideal-scenario" class="anchor" href="#ideal-scenario" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ideal scenario:</h1>
+
+<h1>
+<a id="user-content-as-much-of-the-work-as-possible-is-already-done-in-the-image" class="anchor" href="#as-much-of-the-work-as-possible-is-already-done-in-the-image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>As much of the work as possible is already done, in the image.</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-ideal-scenario-2" class="anchor" href="#ideal-scenario-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ideal scenario #2:</h1>
+
+<h1>
+<a id="user-content-we-dont-want-to-transfer-big-honkin-images-to-multiple-sites-across-the-world" class="anchor" href="#we-dont-want-to-transfer-big-honkin-images-to-multiple-sites-across-the-world" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>We don't want to transfer big honkin' images to multiple sites across the world.</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-what-we-need-to-do" class="anchor" href="#what-we-need-to-do" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What We Need To Do:</h1>
+
+<ul>
+<li>Build base OS + Apple updates.</li>
+<li>Preinstall as much software as possible (from Munki).</li>
+<li>Preload all of our caches / config data.</li>
+<li>Preload all of our on-boot actions to trigger.</li>
+<li>Construct all of this dynamically without manual interaction.</li>
+<li>Ideally, work with any disk restoration tool.</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-that-doesnt-sound-so-hard-right" class="anchor" href="#that-doesnt-sound-so-hard-right" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>That doesn't sound so hard, right?</h1>
+
+<hr>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/scared_cat.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/scared_cat.png" alt="inline fit" style="max-width:100%;"></a></p>
+
+<p>^ bee721, <a href="">https://flic.kr/p/9P8SNb</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-autodmg-cache-builder" class="anchor" href="#autodmg-cache-builder" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>AutoDMG Cache Builder:</h1>
+
+<h2>
+<a id="user-content-httpsgithubcomfacebookit-cpetreemasterautodmg_cache_builder" class="anchor" href="#httpsgithubcomfacebookit-cpetreemasterautodmg_cache_builder" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/facebook/IT-CPE/tree/master/autodmg_cache_builder"><code>https://github.com/facebook/IT-CPE/tree/master/autodmg_cache_builder</code></a>
+</h2>
+
+<hr>
+
+<h1>
+<a id="user-content-how-it-works" class="anchor" href="#how-it-works" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How it works...</h1>
+
+<ul>
+<li>AutoDMG - the base image + Apple updates
+<br>
+<br>
+</li>
+<li>Munki - find out what software should be installed<br>
+<br>
+<br>
+</li>
+<li>Org-specific packages - add extra packages we build</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-creating-the-image-autodmg" class="anchor" href="#creating-the-image-autodmg" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating The Image: AutoDMG</h1>
+
+<ul>
+<li><p>AutoDMG gives us the base OS, and Apple updates.
+<br></p></li>
+<li><p>It also supports templates that allow arbitrary packages to be added.
+<br></p></li>
+<li>It can work entirely via CLI, no GUI interaction required.</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-to-save-time-theres-going-to-be-some-magic-hand-waving-wizardry" class="anchor" href="#to-save-time-theres-going-to-be-some-magic-hand-waving-wizardry" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>To save time, there's going to be some magic hand-waving wizardry.</h1>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/wizard.jpg" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/wizard.jpg" alt="inline" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version" class="anchor" href="#wizard-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>Start with a base OS + Apple updates:</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg1.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg1.png" alt="inline 54%" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-1" class="anchor" href="#wizard-version-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>Query Munki for list of software that should be installed.
+Download that software into a local cache:</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg3.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg3.png" alt="inline 95%" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-2" class="anchor" href="#wizard-version-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>If it's a "simple" package, add it to AutoDMG template.
+If it's a "complex" item, add it to Munki "exceptions" folder:</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg4.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg4.png" alt="inline 90%" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-3" class="anchor" href="#wizard-version-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>The Munki "exceptions" are items that can't be safely installed at image time - see the <a href="https://github.com/MagerValp/AutoDMG/wiki/Packages-Suitable-for-Deployment">AutoDMG Wiki</a> for details.</p>
+
+<p>Since they must be installed by Munki at boot time, we preload all of these items into the Munki cache: 
+<code>/Library/Managed Installs/Cache</code></p>
+
+<p>These can be loaded into AutoDMG template as a single package.</p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-4" class="anchor" href="#wizard-version-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>Add any arbitrary packages I've specified to the AutoDMG template:</p>
+
+<pre><code>&lt;dict&gt;
+  &lt;key&gt;AdditionalPackages&lt;/key&gt;
+  &lt;array&gt;
+    ...
+    &lt;string&gt;additions/Microsoft_Office_2016_15.22.0.pkg&lt;/string&gt;
+    ...
+</code></pre>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-5" class="anchor" href="#wizard-version-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>Download Munki icon cache, add to AutoDMG template:</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg_icons.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/autodmg_icons.png" alt="inline 65%" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-6" class="anchor" href="#wizard-version-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>Download Chef cookbook cache, add to AutoDMG template.
+Extras: </p>
+
+<ul>
+<li>TCC db, FileVault keychains, Diagnostics suppression, iCloud/Setup Assistant suppression, etc.</li>
+</ul>
+
+<pre><code>    &lt;string&gt;/Library/AutoDMG/munki_icons.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/munki_cache.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/chef_cache.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/cpe_tcc.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/cpe_fv.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/cpe_wallpapers.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/suppress_diagnostics.pkg&lt;/string&gt;
+    &lt;string&gt;/Library/AutoDMG/suppress_registration.pkg&lt;/string&gt;
+</code></pre>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-7" class="anchor" href="#wizard-version-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version:</h1>
+
+<p>Once all of our packages are built and added to the template, we can construct the image itself.</p>
+
+<p><code>autodmg_cache_build.py
+  --extras except_adds.json
+  --dsrepo /Users/Shared/Deploystudio
+  --source /Applications/Install OS X El Capitan.app</code></p>
+
+<hr>
+
+<h1>
+<a id="user-content-thats-the-main-part---just-building-the-image-how-we-do-make-this-work-for-60-imaging-servers-worldwide" class="anchor" href="#thats-the-main-part---just-building-the-image-how-we-do-make-this-work-for-60-imaging-servers-worldwide" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>That's the <em>main</em> part - just building the image. How we do make this work for 60+ imaging servers worldwide?</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-previously-on-macbrained" class="anchor" href="#previously-on-macbrained" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Previously, on MacBrained...</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-our-old-strategy" class="anchor" href="#our-old-strategy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our old strategy:</h1>
+
+<ul>
+<li><p>Local DeployStudio Server as a master server</p></li>
+<li><p>Each region contained a replica - "Regional Master"</p></li>
+<li><p>Each office contained a replica pointing to the nearest Regional Master</p></li>
+<li><p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/DS_replicas.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/DS_replicas.png" alt="inline 40%" style="max-width:100%;"></a></p></li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="user-content-this-was-cool-and-all-but-it-took-a-significant-amount-of-time-to-iterate-changes-across-the-globe-since-ds-sync-only-occurred-nightly" class="anchor" href="#this-was-cool-and-all-but-it-took-a-significant-amount-of-time-to-iterate-changes-across-the-globe-since-ds-sync-only-occurred-nightly" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>This was cool and all, but it took a significant amount of time to iterate changes across the globe, since DS sync only occurred nightly.</h2>
+
+<hr>
+
+<h3>
+<a id="user-content-if-i-made-a-change-too-late-in-the-day-the-change-might-not-propagate-across-all-the-imaging-servers-that-day-because-of-time-zones" class="anchor" href="#if-i-made-a-change-too-late-in-the-day-the-change-might-not-propagate-across-all-the-imaging-servers-that-day-because-of-time-zones" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>If I made a change too late in the day, the change might not propagate across all the imaging servers that day, because of time zones.</h3>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/angry_cat.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/angry_cat.png" alt="inline 47%" style="max-width:100%;"></a></p>
+
+<p>^ Maria Zavarzina, <a href="">https://flic.kr/p/nsDAVq</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-part-deux" class="anchor" href="#wizard-version-part-deux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version, Part Deux:</h1>
+
+<p>Rather than transfer this 10+ GB image across the globe on a nightly basis, each site can build this image at each endpoint.</p>
+
+<p><a href="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/server_autodmg.png" target="_blank"><img src="/Users/nmcspadden/Applications/Presentations/MacBrained%20May%202016/server_autodmg.png" alt="inline" style="max-width:100%;"></a></p>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-part-deux-1" class="anchor" href="#wizard-version-part-deux-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version, Part Deux:</h1>
+
+<p>Bandwidth usage to each endpoint:</p>
+
+<ul>
+<li>OS Installer from App Store (~6 GB only a few times a year)</li>
+<li>Standard Munki updates (probably not more than ~300 mb every few days, on average)</li>
+<li>New Apple updates (~150 mb a week, maybe?)</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-wizard-version-part-deux-2" class="anchor" href="#wizard-version-part-deux-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Wizard version, Part Deux:</h1>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Server.app for NetBoot (and Caching, why not)</li>
+<li>OS Installer</li>
+<li>AutoDMG</li>
+<li>Munki</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-and-finally-the-end-result-is" class="anchor" href="#and-finally-the-end-result-is" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>And finally, the end result is...</h1>
+
+<hr>
+
+<h1>
+<a id="user-content-a-fully-updated-image" class="anchor" href="#a-fully-updated-image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>A fully updated image:</h1>
+
+<h2>
+<a id="user-content-with-most-of-the-software-preloaded" class="anchor" href="#with-most-of-the-software-preloaded" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>with most of the software preloaded,</h2>
+
+<h2>
+<a id="user-content-with-minimal-post-restore-activity" class="anchor" href="#with-minimal-post-restore-activity" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>with minimal post-restore activity,</h2>
+
+<h2>
+<a id="user-content-that-can-be-deployed-using-any-disk-restore-tool" class="anchor" href="#that-can-be-deployed-using-any-disk-restore-tool" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>that can be deployed using any disk restore tool,</h2>
+
+<h2>
+<a id="user-content-built-individually-on-each-server" class="anchor" href="#built-individually-on-each-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>built individually on each server.</h2>
+
+<hr>
+
+<h2>
+<a id="user-content-previously-full-image-time-from-boot-to-first-login-took-about-24-minutes" class="anchor" href="#previously-full-image-time-from-boot-to-first-login-took-about-24-minutes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Previously, full image time (from boot to first login) took about ~24 minutes.</h2>
+
+<hr>
+
+<h2>
+<a id="user-content-now-its-down-to-9-minutes" class="anchor" href="#now-its-down-to-9-minutes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Now, it's down to 9 minutes.</h2>
+
+<hr>
+
+<h3>
+<a id="user-content-this-involved-a-lot-of-wizardry-and-magic-hand-waving" class="anchor" href="#this-involved-a-lot-of-wizardry-and-magic-hand-waving" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>This involved a lot of wizardry and magic "hand-waving."</h3>
+
+<h3>
+<a id="user-content-theres-a-whole-lot-more-about-how-we-completely-automate-imaging-server-setup-using-chef-and-how-none-of-this-requires-any-interaction-whatsoever" class="anchor" href="#theres-a-whole-lot-more-about-how-we-completely-automate-imaging-server-setup-using-chef-and-how-none-of-this-requires-any-interaction-whatsoever" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>There's a whole lot more about how we completely automate imaging server setup using Chef, and how none of this requires any interaction whatsoever.</h3>
+
+<h3>
+<a id="user-content-further-details-on-full-implementation-can-be-found-on-my-blog-and-on-the-it-cpe-github-page" class="anchor" href="#further-details-on-full-implementation-can-be-found-on-my-blog-and-on-the-it-cpe-github-page" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Further details on full implementation can be found on my blog, and on the IT-CPE Github page.</h3>
+
+<hr>
+
+<h1>
+<a id="user-content-image-sources" class="anchor" href="#image-sources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image Sources</h1>
+
+<ul>
+<li><p>"Why" Turtle: Nikol Lohr, <a href="">https://flic.kr/p/6vK8TU</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p></li>
+<li><p>Turtle: Nancy Witthuhn, <a href="">https://flic.kr/p/eGUyak</a>,
+<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p></li>
+<li><p>Cheetah: J. Richard Link, <a href="">https://flic.kr/p/oWuR9K</a>
+<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p></li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="user-content-image-sources-1" class="anchor" href="#image-sources-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image Sources</h1>
+
+<ul>
+<li><p>Scared cat: bee721, <a href="">https://flic.kr/p/9P8SNb</a>,
+<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p></li>
+<li><p>Wizard: marie-ll, <a href="">https://flic.kr/p/jF8bP</a>,</p></li>
+<li><p>Angry cat: Maria Zavarzina, <a href="">https://flic.kr/p/nsDAVq</a>,
+<a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons 2.0</a></p></li>
+</ul>
+</article></body></html>

@@ -55,9 +55,13 @@ Until Chef completes its first two runs, the machine is incomplete.
 
 ---
 
-# We can query Munki for the list of software it thinks should be installed.
+# The Process
 
-# To do that, we can use Munki code directly in Python.
+---
+
+## We can query Munki for the list of software it thinks should be installed.
+
+## To do that, we can use Munki code directly in Python.
 
 ---
 
@@ -81,7 +85,7 @@ except ImportError as err:
 
 ---
 
-# We can use Munki code to download these items from the repo:
+## We can use Munki code to download these items from the repo:
 ```
 # These are necessary to populate the globals used in updatecheck
 keychain_obj = keychain.MunkiKeychain()
@@ -102,16 +106,26 @@ updatecheck.processManifestForKey(manifestpath, 'managed_installs',
 ```
 
 ---
+With the `installinfo` dict populated, we can get a list of `managed_intalls` that belong to a provided catalog:
+<br>
 
-# For simple packages, we can download them, and add these to the AutoDMG template.
+```
+  install_list = []
+  for item in installinfo['managed_installs']:
+    detail = updatecheck.getItemDetail(item['name'], [args.catalog])
+    if detail:
+      install_list.append(detail)
+```
 
 ---
 
-# For "complex" or non-standard items (like profiles), we can pre-download them and place them in the Munki cache.
+## For simple packages, we can download them, and add these to the AutoDMG template.
 
-Why should Munki spend time downloading items directly after imaging?
+---
 
-That time can be eliminated significantly by precaching them into `/Library/Managed Installs/Cache/`.
+## For "complex" or non-standard items (like profiles), we can pre-download them and place them in the Munki cache.
+
+Bootstrap time can be reduced significantly by pre-downloading Munki items into `/Library/Managed Installs/Cache/`.
 
 ---
 
@@ -152,16 +166,15 @@ These packages get added to the AutoDMG template - either a local file path, or 
 ---
 
 # Exceptions
-Due to issues with these packages' scripts, don't attempt to install them in the image. 
+These packages cannot be safely installed onto a disk image, usually due to package scripts that are not well-crafted. 
 <br>
 
-Instead place them directly into the Munki cache folder, so that Munki installs them during bootstrapping.
+Instead we place them directly into the Munki cache folder, so that Munki doesn't need to spend time downloading during bootstrapping.
 
 ```
   "exceptions_list": [ 
     # These are Munki items that should be installed by Munki bootstrapping
     "BomgarClient",
-    "Computrace",
     "MicrosoftOffice2016_Serializer"
   ]
 }
@@ -178,6 +191,12 @@ Chef caches all of the cookbooks it runs locally.
 We want to preload special configs and our Mac management codebase.
 
 We want to avoid downloads or dependencies on external sources as much as possible.
+
+---
+
+## The script needs to be able to build any custom packages we need, on-demand and dynamically.
+
+## The `autodmg_org` module contains a function `run_unique_code()` that can be support all of our custom package building.
 
 ---
 
@@ -200,51 +219,45 @@ We want to avoid downloads or dependencies on external sources as much as possib
 
 # 3
 
-## If it's a normal package, add it to AutoDMG template.
+## If it's a normal package, add it to the AutoDMG template.
 
-## If it's a "different" item, move it to a staging Munki cache folder.
+## If it's an "unsafe" item or Exception, move it to a staging Munki cache folder.
 
 ---
 
 # 4
 
-## Package up all of the Munki icons, add to AutoDMG template.
+## Download & package up all of the Munki icons.
 
 ---
 
 # 5
 
-## Package up all of the Chef cache, add to AutoDMG template.
+## Package up the "unsafe"/Exceptions Munki cache.
 
 ---
 
 # 6
 
-## Package up the packages we want to preinstall.
+## Add in all the additional packages we specified in the Extras file.
 
 ---
 
 # 7
 
-## Package up the preloaded Munki cache.
+## Org-specific code: Package up all of the Chef cookbook cache.
 
 ---
 
 # 8
 
-## Package up the Chef package, so it doesn't require download on firstboot.
+## Org-specific code: Preload in our first-boot behavior (Chef bootstrapping code).
 
 ---
 
 # 9
 
-## Add any additional packages we've specified.
-
----
-
-# 10
-
-## Update the AutoDMG [`UpdateProfiles.plist` template](https://github.com/MagerValp/AutoDMGUpdateProfiles/blob/master/UpdateProfiles.plist).
+## Download AutoDMG's available software updates, specified in [`UpdateProfiles.plist` template](https://github.com/MagerValp/AutoDMGUpdateProfiles/blob/master/UpdateProfiles.plist).
 
 ```
   <key>Profiles</key>
@@ -264,12 +277,115 @@ We want to avoid downloads or dependencies on external sources as much as possib
 
 ---
 
+# 10
+
+## Build the "bare" image (Base OS + Updates, nothing else) if it doesn't already exist. We use this for Donations or similar needs.
+
+---
+
 # 11
 
-## Build the image from our template
+## Build the image from our AutoDMG template.
 
 ---
 
 # 12
 
-## 
+## Move the completed images to the DeployStudio repo.
+
+---
+
+# Building the image alone isn't enough. 
+
+# We want to automate the entire imaging server setup process, top to bottom.
+
+---
+
+# Imaging servers need:
+
+* Server.app for NetBoot (and Caching)
+* AutoDMG
+* Munki
+* DeployStudio
+* LaunchD to build the image
+* LaunchD to build the NBI
+
+---
+# Server.app
+
+Server.app can be automated with Bash using `expect`:
+
+[https://derflounder.wordpress.com/2015/10/29/automating-the-setup-of-os-x-server-on-el-capitan-and-yosemite/]()
+
+![inline 68%](derf.png)
+
+---
+# Server.app
+Similarly with Python using [`pexpect`](https://pexpect.readthedocs.io/en/stable/):
+
+```
+import sys
+import pexpect
+server_contents = '/Applications/Server.app/Contents'
+servercmd = "%s/ServerRoot/usr/sbin/server" % server_contents
+server_eula = pexpect.spawn('%s setup' % servercmd, timeout=300)
+server_eula.logfile = sys.stdout
+server_eula.sendline(' ')
+server_eula.expect("(y/N)")
+server_eula.sendline('y')
+server_eula.expect("User name:")
+server_eula.sendline(username)
+server_eula.expect("Password:")
+server_eula.sendline(password)
+try:
+  server_eula.expect(pexpect.TIMEOUT, timeout=None)
+except:
+  pass
+sys.exit(0)
+```
+
+---
+
+# AutoDMG LaunchDaemon:
+Run the image build script nightly at 2 AM:
+
+```
+  <key>ProgramArguments</key>
+  <array>
+    <string>/path/to/autodmg_cache_build.py</string>
+    <string>--extras</string>
+    <string>/Library/AutoDMG/except_adds.json</string>
+    <string>--dsrepo</string>
+    <string>/Users/Shared/DeployStudio</string>
+    <string>--source</string>
+    <string>/Applications/Install OS X El Capitan.app</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Hour</key>
+      <integer>2</integer>
+      <key>Minute</key>
+      <integer>0</integer>
+    </dict>
+  </array>
+```
+
+---
+# NBI Creation:
+<br>
+<br>
+With DeployStudio, you can use [Per Oloffson's](http://magervalp.github.io/) [AutoDSNBI](https://github.com/MagerValp/AutoDSNBI) script to automate the building of the DS NBI.
+
+---
+
+# AutoDSNBI LaunchDaemon:
+Run the NBI build script nightly at 1 AM:
+
+```
+launchd goes here
+```
+
+---
+
+# 

@@ -47,6 +47,14 @@ slidenumbers: false
 --- 
 # On first boot:
 
+🕐🕑🕒
+- Let's go ahead and install MS Office...
+
+![inline](turtle_why.png)
+
+--- 
+# On first boot:
+
 🕐🕑🕒🕔
 - Let's go ahead and install MS Office... ✅
 - Let's install Firefox
@@ -163,13 +171,15 @@ slidenumbers: false
 
 ---
 
-# Dynamic provisioning is great and flexible.
+# Modular deployment is great and flexible.
 
-# It's the best option for many, if not most.
+## It's the best option for many, if not most.
 
 ---
 
 # But it's not very *fast*.
+
+![inline](turtle.png)
 
 ^ At Facebook, *speed* is of the essence, due to sheer volume of numbers. During intern season, we need to go through hundreds of machines in a manner of weeks. Thin deployments just aren't fast enough.
 
@@ -182,6 +192,7 @@ slidenumbers: false
 
 # Imaging is fast!
 
+![inline](cheetah.png)
 
 ---
 
@@ -295,6 +306,12 @@ In such a scenario, the image rarely needs rebuilding or change.
 
 ---
 
+# To save time, there's going to be some magic hand-waving wizardry.
+
+![inline](wizard.jpg)
+
+---
+
 # Wizard version:
 
 Start with a base OS + Apple updates:
@@ -318,6 +335,17 @@ If it's a "simple" package, add it to AutoDMG template.
 If it's a "complex" item, add it to Munki "exceptions" folder:
 
 ![inline 90%](autodmg4.png)
+
+---
+
+# Wizard version:
+
+The Munki "exceptions" are items that can't be safely installed at image time - see the [AutoDMG Wiki](https://github.com/MagerValp/AutoDMG/wiki/Packages-Suitable-for-Deployment) for details.
+
+Since they must be installed by Munki at boot time, we preload all of these items into the Munki cache: 
+`/Library/Managed Installs/Cache`
+
+These can be loaded into AutoDMG template as a single package.
 
 ---
 
@@ -434,77 +462,6 @@ Requirements:
 
 ---
 
-# Automation:
-
-Server.app can be automated with Bash using `expect`:
-
-[https://derflounder.wordpress.com/2015/10/29/automating-the-setup-of-os-x-server-on-el-capitan-and-yosemite/]()
-
-![inline 68%](derf.png)
-
----
-
-# Automation:
-
-Similarly with Python using [`pexpect`](https://pexpect.readthedocs.io/en/stable/):
-
-```
-import sys
-import pexpect
-server_contents = '/Applications/Server.app/Contents'
-servercmd = "%s/ServerRoot/usr/sbin/server" % server_contents
-server_eula = pexpect.spawn('%s setup' % servercmd, timeout=300)
-server_eula.logfile = sys.stdout
-server_eula.sendline(' ')
-server_eula.expect("(y/N)")
-server_eula.sendline('y')
-server_eula.expect("User name:")
-server_eula.sendline(username)
-server_eula.expect("Password:")
-server_eula.sendline(password)
-try:
-  server_eula.expect(pexpect.TIMEOUT, timeout=None)
-except:
-  pass
-sys.exit(0)
-```
-
----
-
-# Automation:
-<br>
-<br>
-With DeployStudio, you can use [Per Oloffson's](http://magervalp.github.io/) [AutoDSNBI](https://github.com/MagerValp/AutoDSNBI) script to automate the building of the DS NBI.
-
----
-
-# Automation:
-LaunchDaemon to run the image build script:
-
-```
-  <key>ProgramArguments</key>
-  <array>
-    <string>/path/to/autodmg_cache_build.py</string>
-    <string>--extras</string>
-    <string>/Library/AutoDMG/except_adds.json</string>
-    <string>--dsrepo</string>
-    <string>/Users/Shared/DeployStudio</string>
-    <string>--source</string>
-    <string>/Applications/Install OS X El Capitan.app</string>
-  </array>
-  <key>StartCalendarInterval</key>
-  <array>
-    <dict>
-      <key>Hour</key>
-      <integer>2</integer>
-      <key>Minute</key>
-      <integer>0</integer>
-    </dict>
-  </array>
-```
-
----
-
 # And finally, the end result is...
 
 ---
@@ -517,6 +474,14 @@ LaunchDaemon to run the image build script:
 
 ---
 
+## Previously, full image time (from boot to first login) took about ~24 minutes.
+
+---
+
+## Now, it's down to 9 minutes.
+
+---
+
 ### This involved a lot of wizardry and magic "hand-waving."  
 
 ### There's a whole lot more about how we completely automate imaging server setup using Chef, and how none of this requires any interaction whatsoever.
@@ -525,9 +490,25 @@ LaunchDaemon to run the image build script:
 
 ---
 
-# Sources
+# Image Sources
+
+* "Why" Turtle: Nikol Lohr, [https://flic.kr/p/6vK8TU]()
+[Creative Commons 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode)
+
+* Turtle: Nancy Witthuhn, [https://flic.kr/p/eGUyak](),
+[Creative Commons 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode)
+
+* Cheetah: J. Richard Link, [https://flic.kr/p/oWuR9K]()
+[Creative Commons 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode)
+
+---
+
+# Image Sources
 
 * Scared cat: bee721, [https://flic.kr/p/9P8SNb](),
+[Creative Commons 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode)
+
+* Wizard: marie-ll, [https://flic.kr/p/jF8bP](),
 [Creative Commons 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode)
 
 * Angry cat: Maria Zavarzina, [https://flic.kr/p/nsDAVq](),
